@@ -1,0 +1,27 @@
+/*
+ *	Background Color: #222
+ *	Color: #fff
+ */
+
+body {
+	font-family: 'Kameron', serif;
+}
+
+#container {
+	color: #fff;
+	background-color: #222;
+	width: 960px;
+	margin: 0 auto;
+}
+
+.logo {
+	font-family: 'Radley', serif;
+	font-size: 4em;
+}
+
+.logo a:link,
+.logo a:visited,
+.logo a:hover {
+	color: #fff;
+	text-decoration: none;
+}
