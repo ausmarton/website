@@ -14,6 +14,26 @@ body {
 	margin: 0 auto;
 }
 
+#copyright {
+	text-align: center;
+	padding: 1em 0;
+}
+
+#header, #content-area, #footer {
+	padding: 0 1em;
+}
+
+#content-area {
+	min-height: 500px;
+	background-color: #fff;
+	color: #000;
+	padding: 1em;
+}
+
+#footer {
+	padding-top: 1em;
+}
+
 .logo {
 	font-family: 'Radley', serif;
 	font-size: 4em;
@@ -24,4 +44,55 @@ body {
 .logo a:hover {
 	color: #fff;
 	text-decoration: none;
+}
+
+.column {
+	float: left;
+}
+
+#main-content {
+	width: 70%;
+}
+
+.region-content {
+	padding-right: 1em;
+}
+
+#sidebar {
+	width: 30%;
+	background-color: #eee;
+}
+
+.region-sidebar {
+	padding: 1em;
+}
+
+#sidebar .block h2 {
+	font-size: 1.3em;
+	font-weight: bold;
+}
+
+#sidebar .block .content {
+	padding-top: 1em;
+}
+
+#sidebar .block .content p {
+	padding-bottom: 1em;
+}
+
+#sidebar .block .content ul.contact-details {
+	padding: 0 0.3em;
+}
+
+#sidebar .block .content ul.contact-details li {
+	padding-bottom: 0.2em;
+}
+
+#sidebar .block .content ul.contact-details li.address p {
+	padding: 0;
+}
+
+#sidebar .block .content ul.contact-details li.name,
+#sidebar .block .content ul.contact-details li .title {
+	font-size: 1.2em;
 }
