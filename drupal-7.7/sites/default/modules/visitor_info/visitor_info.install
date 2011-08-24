@@ -1,0 +1,69 @@
+<?php
+function visitor_info_schema() {
+  $schema['visitor_info'] = array(
+    'description' => 'Table to store contact details of visitors to our site.',
+    'fields' => array(
+      'vid' => array(
+        'description' => 'Primary Key: Unique visitor ID.',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+      'name' => array(
+        'type' => 'varchar',
+        'length' => 128,
+        'not null' => TRUE,
+        'default' => '',
+        'description' => 'Full name of the visitor.',
+      ),
+      'age' => array(
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => 'Age of the visitor, defaults to zero if not provided',
+      ),
+      'income' => array(
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => 'Annual income of the visitor',
+      ),
+      'email' => array(
+        'type' => 'varchar',
+	'length' => 128,
+        'default' => '',
+        'description' => 'Email address of the visitor.',
+      ),
+      'phone' => array(
+        'type' => 'varchar',
+	'length' => 20,
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => 'Contact number of the visitor',
+      ),
+      'time_to_call' => array(
+        'type' => 'varchar',
+	'length' => 30,
+        'not null' => TRUE,
+        'default' => '',
+        'description' => 'Best time to call the visitor',
+      ),
+      'city' => array(
+        'type' => 'varchar',
+	'length' => 30,
+        'not null' => TRUE,
+        'default' => '',
+        'description' => 'City of the visitor',
+      ),
+      'time_of_visit' => array(
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => 'Timestamp for when the user visited our site.',
+      ),
+    ),
+    'primary key' => array('vid'),
+  );
+
+  return $schema;
+}

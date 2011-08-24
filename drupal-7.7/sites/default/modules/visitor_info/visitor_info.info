@@ -1,0 +1,5 @@
+name = Visitor Info
+description = Module to store contact details of visitors.
+package = austeriofernandes
+version = VERSION
+core = 7.x
