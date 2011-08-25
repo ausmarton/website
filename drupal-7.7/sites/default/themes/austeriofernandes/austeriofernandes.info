@@ -6,6 +6,7 @@ engine = phptemplate
 
 stylesheets[all][] = css/reset.css
 stylesheets[all][] = css/global.css
+stylesheets[all][] = css/content.css
 
 scripts[] = js/script.js
 

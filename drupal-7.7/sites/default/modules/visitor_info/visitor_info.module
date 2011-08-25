@@ -64,6 +64,16 @@ function visitor_info_contact_form($form_state) {
 }
 
 function visitor_info_contact_form_submit($form, &$form_state) {
-	db_query("INSERT INTO {visitor_info} (name,age, income, email, phone, time_to_call, city, time_of_visit) VALUES ('%s', '%s', '%s', '%s', '%s', '%s', '%s', %d)", $form_state['values']['name'], $form_state['values']['age'], $form_state['values']['income'], $form_state['values']['email'], $form_state['values']['phone'], $form_state['values']['time_to_call'], $form_state['values']['city'], $form_state['values']['time_of_visit']);
+	$record = array(
+		'name' => $form_state['values']['name'],
+		'age' => $form_state['values']['age'],
+		'income' => $form_state['values']['income'],
+		'email' => $form_state['values']['email'],
+		'phone' => $form_state['values']['phone'],
+		'time_to_call' => $form_state['values']['time_to_call'],
+		'city' => $form_state['values']['city'],
+		'time_of_visit' => time()
+	);
+	drupal_write_record('visitor_info',$record);
 	drupal_set_message(t('Your form has been saved.'));
 }

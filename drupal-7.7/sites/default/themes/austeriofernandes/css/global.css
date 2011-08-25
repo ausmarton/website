@@ -21,6 +21,7 @@ body {
 
 #header, #content-area, #footer {
 	padding: 0 1em;
+	overflow: hidden;
 }
 
 #content-area {
@@ -46,8 +47,53 @@ body {
 	text-decoration: none;
 }
 
+a:link,
+a:visited,
+a:hover {
+	text-decoration: none;
+	outline: none;
+}
+
+#header,
+#header a:link,
+#header a:visited,
+#header a:hover {
+	color: #fff;
+}
+
+#header .block-menu {
+	padding: 0.5em;
+	padding-bottom: 1em;
+}
+
+#header .block-menu ul.menu li {
+	display: inline;
+	list-style-type: none;
+	list-style-image: none;
+	padding: 0;
+}
+
+#header .block-menu ul.menu li a:link,
+#header .block-menu ul.menu li a:visited,
+#header .block-menu ul.menu li a:hover {
+	font-weight: bold;
+}
+
+#header .block-menu ul.menu li a:hover,
+#header .block-menu ul.menu li.active-trail a:link,
+#header .block-menu ul.menu li.active-trail a:visited,
+#header .block-menu ul.menu li.active-trail a:hover {
+	color: #ffcc88;
+}
+
 .column {
 	float: left;
+}
+
+#content-area a:link,
+#content-area a:visited,
+#content-area a:hover {
+	color: #883311;
 }
 
 #main-content {
@@ -95,4 +141,12 @@ body {
 #sidebar .block .content ul.contact-details li.name,
 #sidebar .block .content ul.contact-details li .title {
 	font-size: 1.2em;
+}
+
+#footer .content p {
+	margin-bottom: 1em;
+}
+
+#footer .content em {
+	font-weight: bold;
 }
